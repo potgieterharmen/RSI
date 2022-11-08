@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}    
+
+<div class="container-image">
+  <a href="" download="RSI_image" id="img_download">
+    <img id="image" style="display: none;"/>
+  </a>
+  <a href="" download="RSI_video" id="vid_download">
+    <video id="video" style="display: none;" controls></video>
+  </a>
+  <br/>
+  <textarea id="results" name="results" rows="2" cols="50">
+    
+  </textarea>
+</div>
+
+<div class="container">
+  <div class="container">
+    <form>
+      <input
+        id="imageinput"
+        type="file"
+        accept="video/*,image/*"
+        name="image"
+        onchange="readUrl(this);"
+        />
+        <div class="slider">
+          <input type="range" min="0" max="1" step="0.05" oninput="rangeValue.innerText = this.value" id="confidence">
+          <p id="rangeValue">0.5</p>
+        </div>
+      </form>
+  </div>
+    
+
+  
+
+    <div class="container">
+      <p class = "sliderp"> Confidence Level</p> 
+      <div class="row">
+        <div class="d-grid gap-5 d-md-flex justify-content-md-center">
+          <button name="cam" class="button" id="opencam" hidden>Video Cam</button>
+          <button name="send"  class="button" id="sendbutton">Send</button>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <br/>      
+</div>
+  {% endblock %}

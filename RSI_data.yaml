@@ -1,0 +1,9 @@
+path: ../datasets/RSI  # dataset root dir
+
+train: images/train
+val: images/val
+test: images/test
+
+
+nc: 12
+names: [ 'information--parking--g1', 'regulatory--height-limit--g1', 'regulatory--maximum-speed-limit-40--g1', 'regulatory--maximum-speed-limit-60--g1', 'regulatory--no-entry--g1', 'regulatory--no-heavy-goods-vehicles--g1', 'regulatory--one-way-straight--g1', 'regulatory--one-way-left--g1', 'regulatory--stop--g1', 'regulatory--yield--g1', 'warning--road-bump--g1', 'warning--slippery-road-surface--g1']
